@@ -1,34 +1,69 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Button from './components/Button'
+import flowey from './assets/flowey.png'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [autoClicker, setAutoClicker] = useState(0)
+  const [autoClickerPrice, setAutoClickerPrice] = useState(10)
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+          <img 
+            src={flowey} width={254} height={254} 
+            className="flowey icon" alt="Flowey from the game Undertale" 
+            onClick={() => setCount((count) => count + 1)}
+          />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <h1>{count}<br></br>floweys</h1>
+      
+      <div className="options">
+        <AutoClicker 
+          count={count}
+          setCount={setCount}
+          autoClicker={autoClicker}
+          setAutoClicker={setAutoClicker}
+          autoClickerPrice={autoClickerPrice}
+          setAutoClickerPrice={setAutoClickerPrice}
+        />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+      
+      <p className="debug">
+        {`Auto Clicker: ${autoClicker}`}
+      </p>
+      <p className="debug">
+        {`Auto Clicker Price: ${autoClickerPrice}`}
+      </p>
+
+      <hr />
+
+      <p className="creator">
+        Made by: Shyrine Salvador
       </p>
     </>
+  )
+}
+
+function AutoClicker({count, setCount, autoClicker, setAutoClicker, autoClickerPrice, setAutoClickerPrice}) {
+
+  const handleBuy = () => {
+    if (count >= autoClickerPrice) {
+      setAutoClicker(autoClicker + 1)
+      setCount(count - autoClickerPrice)
+      setAutoClickerPrice(autoClickerPrice + 2)
+    }
+  }
+
+
+  return (
+    <Button 
+      label={`Buy Auto-Clicker (+1/sec) ${autoClickerPrice}`}
+      className='auto-clicker' 
+      btnColor='#6e581e'
+      onClick={handleBuy}/>
   )
 }
 
