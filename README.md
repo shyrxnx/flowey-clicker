@@ -1,16 +1,69 @@
-# React + Vite
+# 🌻 Flowey Clicker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Flowey Clicker is a small React clicker game inspired by Flowey from **Undertale**.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎮 How to Play
 
-## React Compiler
+- Click Flowey to earn points.  
+- Buy **Click Upgrades** to make each click stronger.  
+- Buy **Auto Clickers** to automatically gain points every second.  
+- The price of  Clicker and Auto Clickers goes up the more you have.  
+- There’s **no save feature yet**, so if you refresh the page, your progress resets.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 Tech Used
+
+- **React** (with `useState` and `useEffect`)  
+- Basic CSS for styling  
+
+
+
+## 🧩 How to Run It
+
+1. Clone the repo  
+   ```bash
+   git clone https://github.com/yourusername/flowey-clicker.git
+   cd flowey-clicker
+   ```
+
+2. Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+3. Run the app
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser to the URL shown in your terminal (usually `http://localhost:5173`).
+
+
+
+## ⚠️ Notes
+
+* No data persistence yet — refreshing the page will reset everything.
+* This is just a fun project to learn React and experiment with game logic.
+
+## 🌸 Credits
+
+* **Flowey** and all related imagery belong to *Toby Fox*, creator of **Undertale**.
+
+
+## ✨ Ideas for Future Updates
+
+* Add localStorage saving
+* Add sounds and animations
+* Add more upgrades and UI polish
+* Maybe add music?
+
+---
+
+Made by **Shyrine Salvador** — for practicing ReactJS
+
+> “You’re filled with DETERMINATION.”
+
